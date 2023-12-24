@@ -30,10 +30,16 @@ class ToDoAddScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Center(
-              child: Text("add your task"),
-            ),
-            backgroundColor: Colors.orangeAccent),
+          leading: IconButton(
+              onPressed: () {
+                Get.to(ToDoScreen());
+              },
+              icon: Icon(Icons.arrow_back)),
+          title: Center(
+            child: Text("add your task"),
+          ),
+          backgroundColor: Colors.deepPurple[100],
+        ),
         body: Padding(
             padding: EdgeInsets.all(15),
             child: Form(
@@ -117,13 +123,13 @@ class ToDoAddScreen extends StatelessWidget {
                 ),
                 MaterialButton(
                     minWidth: double.infinity,
-                    color: Colors.orangeAccent,
+                    color: Colors.deepPurple[100],
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         ToDoadd();
                       }
                     },
-                    child: Text("add Tasks"))
+                    child: Text("add Task"))
               ])),
             )));
   }

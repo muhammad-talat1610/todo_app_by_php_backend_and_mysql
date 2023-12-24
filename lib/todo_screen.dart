@@ -62,7 +62,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text("Todo List")),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.deepPurple[100],
       ),
       body: ListView(
         children: [
